@@ -1,7 +1,17 @@
 # da-ayr-prototyping
-AYR prototypes based on GDS compnent library.
 
-There may be some non-GDS components used from the TNA and TDR component libraries – these will be documented on confluence:
+## Components
+AYR prototypes principlally uses the GDS component library.
 
-[
-](https://national-archives.atlassian.net/l/cp/A6Gqw8Nb)https://national-archives.atlassian.net/l/cp/A6Gqw8Nb
+However, there may also be some use of non-GDS components from the TNA and TDR component libraries:
+
+[TNA Components GitHub repo](https://github.com/nationalarchives/tna-components)
+
+[TNA Components GitHub repo](https://github.com/nationalarchives/tdr-components)
+
+
+
+
+Any usage of non-GDS components will be documented on the confluence page [Design component used on AYR](https://national-archives.atlassian.net/l/cp/A6Gqw8Nb)
+
+---
