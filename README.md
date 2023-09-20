@@ -1,7 +1,7 @@
 # da-ayr-prototyping
 
 ## Components
-AYR prototypes principlally uses the GDS component library.
+AYR prototypes principally uses the GDS component library.
 
 However, there may also be some use of non-GDS components from the TNA and TDR component libraries:
 
