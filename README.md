@@ -1,5 +1,16 @@
 # da-ayr-prototyping
 
+## Quick start set up
+### What you'll need...
+1. code editor (Studio Visual code is recommended – Free).
+2. Access to a publishing host (to show and share a public prototype link, AYR uses [Heroku](https://www.heroku.com/home) which is a paid service.
+3. An undertsanding of the [GDS design system](https://design-system.service.gov.uk)
+
+### What you'll need... /
+
+Firsty, head over to [GDS getting started with advanced prototype kit](https://prototype-kit.service.gov.uk/docs/install/getting-started-advanced).
+Follow the instructions.
+
 ## Components
 AYR prototypes principally uses the GDS component library.
 
