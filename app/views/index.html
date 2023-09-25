@@ -1,4 +1,5 @@
 {% extends "layouts/main.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {% set pageName="Home" %}
 
@@ -7,14 +8,40 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+    <h1 class="govuk-heading-l">Access Your Records (AYR)</h1>
+    <h2 class="govuk-heading-m">Welcome</h2>
+    {{ govukRadios({
+      classes: "govuk-radios--small",
+      name: "whereDoYouLive",
+      fieldset: {
+        legend: {
+          text: "Where do you live?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "england",
+          text: "England"
+        },
+        {
+          value: "scotland",
+          text: "Scotland"
+        },
+        {
+          value: "wales",
+          text: "Wales"
+        },
+        {
+          value: "northern-ireland",
+          text: "Northern Ireland"
+        }
+      ]
+    }) }}
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
+
 
 {% endblock %}
