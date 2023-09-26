@@ -17,6 +17,13 @@
 
     <div class="govuk-!-padding-bottom-6"></div>
     {{ govukRadios({
+      errorMessage:{ 
+       text:"Error message"
+      },
+      hint:{ 
+        html:"<p>Supplied credentials when you registered.</p>"
+      },
+
       name: "serviceRequired",
       fieldset: {
         legend: {
