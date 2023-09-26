@@ -1,5 +1,6 @@
 {% extends "layouts/main.html" %}
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {% set pageName="Home" %}
 
@@ -7,35 +8,38 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-l">Access Your Records (AYR)</h1>
-    <h2 class="govuk-heading-m">Welcome</h2>
-    {{ govukRadios({
-      classes: "govuk-radios--small",
-      name: "whereDoYouLive",
-      fieldset: {
-        legend: {
-          text: "Where do you live?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
-        }
-      },
-      items: [
-        {
-          value: "england",
-          text: "England"
-        },
-        {
-          value: "scotland",
-          text: "Scotland"
-        },
-    
-        {
-          value: "northern-ireland",
-          text: "Northern Ireland"
-        }
-      ]
+    {{ govukWarningText({
+      text: "Do not share your login details with anyone else.",
+      iconFallbackText: "Warning"
     }) }}
+    <h1 class="govuk-heading-l">Login to Access Your Records</h1>
+    <p class="govuk-body-l">Please enter your government department credentials.</p>
+
+    {{ govukInput({
+      label: {
+        text: "Email",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "event-name",
+      name: "eventName"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Password",
+        classes: "govuk-label--m",
+        isPageHeading: true
+      },
+      id: "event-name",
+      name: "eventName"
+    }) }}
+
+    
+   
+    
+    
+    
 
   </div>
 </div>
