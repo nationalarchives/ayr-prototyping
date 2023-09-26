@@ -1,0 +1,45 @@
+
+
+{% extends "layouts/main.html" %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+  
+{% endblock %}
+
+
+{% block content %}
+<h1 class="govuk-heading-l">Welcome</h1>
+    <p class="govuk-body-l">This would be intro text for duo access users to both TDR and AYR.</p>
+    <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque. Mauris nunc congue nisi vitae suscipit tellus.</p>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+    {{ govukRadios({
+      name: "serviceRequired",
+      fieldset: {
+        legend: {
+          text: "What service do you require?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "tdr",
+          text: "Transfer a digital record"
+        },
+        {
+          value: "ayr",
+          text: "Access your digital records"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Go to service",
+      href: "#"
+    }) }}
+
+{% endblock %}
