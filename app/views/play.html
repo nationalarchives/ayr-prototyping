@@ -16,7 +16,14 @@
     <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque. Mauris nunc congue nisi vitae suscipit tellus.</p>
 
     <div class="govuk-!-padding-bottom-6"></div>
+   
     {{ govukRadios({
+      errorMessage:{ 
+       text:"Error message"
+      },
+      hint:{ 
+        html:"<p>Supplied credentials when you registered.</p>"
+      },
       name: "serviceRequired",
       fieldset: {
         legend: {
