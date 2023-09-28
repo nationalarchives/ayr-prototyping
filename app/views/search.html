@@ -1,6 +1,7 @@
 
 
 {% extends "layouts/main.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
@@ -11,33 +12,50 @@
 
 
 {% block content %}
-<h1 class="govuk-heading-l">Search screen placeholder page</h1>
-   
-    <div class="govuk-!-padding-bottom-6"></div>
+
+
+
+    {{ govukInput({
+      hint:{ 
+        html:"<p>Find digital records transferred to The National Archives.</p>"
+      },
+      label: {
+        html: "Search for closed records",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      
+      id: "event-name",
+      name: "eventName"
+    }) }}
+
     {{ govukRadios({
-      name: "serviceRequired",
+      classes: "govuk-radios--inline",
+      name: "changedName",
       fieldset: {
         legend: {
-          text: "What service do you require?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--m"
+          classes: "govuk-fieldset__legend--l"
         }
       },
+
       items: [
         {
-          value: "tdr",
-          text: "Transfer a digital record"
+          value: "myRecords",
+          text: "My records"
         },
         {
-          value: "ayr",
-          text: "Access your digital records"
+          value: "deptRecords",
+          text: "All departments records"
         }
       ]
     }) }}
 
     {{ govukButton({
-      text: "Go to service",
-      href: "#"
+      text: "Search"
     }) }}
+    
 
+    <div class="govuk-!-padding-bottom-6"></div>
+   
 {% endblock %}
