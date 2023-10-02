@@ -49,4 +49,32 @@
       href: "#"
     }) }}
 
+
+
+
+    {{ govukRadios({
+      classes: "govuk-radios--inline govuk-radios--small",
+      name: "changedName",
+      fieldset: {
+        legend: {
+          text: "Have you changed your name?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      hint: {
+        text: "This includes changing your last name or spelling your name differently."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+
 {% endblock %}
