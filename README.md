@@ -9,7 +9,7 @@
 ### Terminal instructions... /
 
 Firsty, head over to [GDS getting started with advanced prototype kit](https://prototype-kit.service.gov.uk/docs/install/getting-started-advanced).
-Follow the instructions. 
+Follow the instructions.
 
 Should you run into trouble creating a prototype for instance an error is shown "missing script: 'dev" is displayed, please follow these detailed instructions written to overcome thiS issue.
 
@@ -24,10 +24,10 @@ Should you run into trouble creating a prototype for instance an error is shown 
 
     *You can manage your prototype at:*
     <ins>http://localhost:3000/manage-prototype<ins>
-   
+
     *The Prototype Kit is now running at:*
     <ins>http://localhost:3000/manage-prototype<ins>
-   
+
 
 
 ## Components
