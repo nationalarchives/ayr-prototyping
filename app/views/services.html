@@ -6,7 +6,7 @@
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
-  
+
 {% endblock %}
 
 
@@ -16,6 +16,8 @@
     <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque. Mauris nunc congue nisi vitae suscipit tellus.</p>
 
     <div class="govuk-!-padding-bottom-7"></div>
+
+    <form class="form" action="/site-service" method="post">
     {{ govukRadios({
       name: "serviceRequired",
       fieldset: {
@@ -38,8 +40,9 @@
     }) }}
 
     {{ govukButton({
-      text: "Go to service",
-      href: "search.html"
+      text: "Go to service"
     }) }}
+
+    </form>
 
 {% endblock %}

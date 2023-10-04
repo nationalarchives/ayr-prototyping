@@ -1,0 +1,24 @@
+
+
+{% extends "layouts/main.html" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+<h1 class="govuk-heading-l">Welcome to TDR</h1>
+    <p class="govuk-body-l">This is a placeholder screen for TDR.</p>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+
+    {{ govukButton({
+      text: "Go back to services",
+      href: "search.html"
+    }) }}
+
+{% endblock %}
