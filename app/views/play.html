@@ -6,7 +6,7 @@
 
 {% block pageTitle %}
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
-  
+
 {% endblock %}
 
 
@@ -16,12 +16,12 @@
     <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque. Mauris nunc congue nisi vitae suscipit tellus.</p>
 
     <div class="govuk-!-padding-bottom-6"></div>
-   
+
     {{ govukRadios({
-      errorMessage:{ 
+      errorMessage:{
        text:"Error message"
       },
-      hint:{ 
+      hint:{
         html:"<p>Supplied credentials when you registered.</p>"
       },
       name: "serviceRequired",
@@ -39,7 +39,7 @@
         },
         {
           value: "ayr",
-          text: "Access your digital records"  
+          text: "Access your digital records"
         }
       ]
     }) }}
@@ -75,6 +75,24 @@
           text: "No"
         }
       ]
+    }) }}
+
+
+    {{ govukInput({
+      hint:{
+        html:"<p>Find digital records transferred to The National Archives.</p>"
+      },
+      label: {
+        html: "Search for closed records",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+      prefix: {
+        text:"£"
+      },
+
+      id: "event-name",
+      name: "eventName"
     }) }}
 
 {% endblock %}

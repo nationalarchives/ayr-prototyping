@@ -1,0 +1,135 @@
+
+
+{% extends "layouts/main.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    {{ govukInput({
+      hint:{
+        html:"<p>Find digital records transferred to The National Archives.</p>"
+      },
+      label: {
+        html: "Search for closed records",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
+
+      id: "event-name",
+      name: "eventName"
+    }) }}
+
+    {{ govukRadios({
+      classes: "govuk-radios--inline govuk-radios--small",
+      name: "changedName",
+      fieldset: {
+        legend: {
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+
+      items: [
+        {
+          value: "myRecords",
+          text: "My records"
+        },
+        {
+          value: "deptRecords",
+          text: "All departments records"
+        }
+      ]
+    }) }}
+
+
+    {{ govukButton({
+      text: "Search"
+    }) }}
+
+
+    <div class="govuk-!-padding-bottom-6"></div>
+    <h1 class="govuk-heading-l">Your closed records</h1>
+
+    <form>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Sort records by
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+            <option value="consignment" selected="">Consignment</option>
+            <option value="series">Series</option>
+        </select>
+          <button class="govuk-button" data-module="govuk-button">
+        Sort</button>
+      </div>
+</form>
+
+
+    {{ govukTable({
+
+      captionClasses: "govuk-table__caption--l",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Consignment number",
+          classes: "govuk-!-width-one-half"
+        },
+        {
+          text: "Rate for vehicles",
+          classes: "govuk-!-width-one-quarter"
+        },
+        {
+          text: "Rate for bicycles",
+          classes: "govuk-!-width-one-quarter"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "First 6 weeks"
+          },
+          {
+            text: "£109.80 per week"
+          },
+          {
+            text: "£59.10 per week"
+          }
+        ],
+        [
+          {
+            text: "Next 33 weeks"
+          },
+          {
+            text: "£159.80 per week"
+          },
+          {
+            text: "£89.10 per week"
+          }
+        ],
+        [
+          {
+            text: "Total estimated pay"
+          },
+          {
+            text: "£4,282.20"
+          },
+          {
+            text: "£2,182.20"
+          }
+        ]
+      ]
+    }) }}
+
+{% endblock %}
