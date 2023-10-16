@@ -12,36 +12,55 @@
 
 {% endblock %}
 
+
 {% block content %}
 
-<div class="govuk-width-container">
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        {{ govukInput({
-          hint:{
-            html:"<p>Find digital records transferred to The National Archives.</p>"
-          },
-          label: {
-            html: "Search for digital records",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
 
-          id: "event-name",
-          name: "eventName"
-        }) }}
+    {{ govukInput({
+      hint:{
+        html:"<p>Find digital records transferred to The National Archives.</p>"
+      },
+      label: {
+        html: "Search for closed records",
+        classes: "govuk-label--l",
+        isPageHeading: true
+      },
 
-        {{ govukButton({
-          text: "Search"
-        }) }}
-      </div>
-    </div>
+      id: "event-name",
+      name: "eventName"
+    }) }}
 
-</div>
+    {{ govukRadios({
+      classes: "govuk-radios--inline govuk-radios--small",
+      name: "changedName",
+      fieldset: {
+        legend: {
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+
+      items: [
+        {
+          value: "myRecords",
+          text: "My records"
+        },
+        {
+          value: "deptRecords",
+          text: "All departments records"
+        }
+      ]
+    }) }}
+
+
+    {{ govukButton({
+      text: "Search"
+    }) }}
+
 
     <div class="govuk-!-padding-bottom-6"></div>
-    <h2 class="govuk-heading-m">Browse digital records</h2>
+    <h1 class="govuk-heading-l">Your closed records</h1>
 
     <form>
       <div class="govuk-form-group">
