@@ -1,5 +1,23 @@
-
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 //
-// Add extra styles here
+// Override styles for AYR, use gov BEM classes and adapt them with elements and/or modifiers.
+
+.govuk-header {
+    &__logo {
+        &--tna {
+            width: 100%;
+        }
+    }
+    &__logotype-text {
+        &--tna {
+            font-size: 1rem;
+            text-align: right;
+        }
+        & a {
+            font-weight: bold;
+            float: right;
+            margin-top: 0.5rem;
+        }
+    }
+}
