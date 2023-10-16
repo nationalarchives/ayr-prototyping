@@ -1,0 +1,117 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukWarningText({
+      text: "Do not share your sign in details with anyone else.",
+      iconFallbackText: "Warning"
+    }) }}
+    <h1 class="govuk-heading-l">Sign in to Access Your Records</h1>
+
+    {{ govukInput({
+      label: {
+        text: "Email",
+        classes: "govuk-label--s",
+        isPageHeading: true
+      },
+      id: "email",
+      name: "eventName"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Password",
+        classes: "govuk-label--s",
+        isPageHeading: true
+      },
+      id: "password",
+      name: "eventName",
+      type: "password"
+    }) }}
+
+
+    {{ govukButton({
+      text: "Sign in",
+      href: "services.html"
+    }) }}
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">I have forgotten my password</a>
+    </p>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+{{ govukInput({
+  fieldset: {
+    legend: {
+      classes: "govuk-fieldset__legend--s",
+      text: "What servies would you like to use?"
+    }
+  },
+  hint: {
+    text: "Select one option"
+  },
+  items: [{
+    value: "email",
+    text: "Email",
+    conditional: {
+      html: govukInput({
+        classes: "govuk-!-width-one-third",
+        label: {
+          text: "Email address"
+        },
+        type: "email",
+        spellcheck: "false",
+        decorate: "email-address",
+        validate: {
+          conditional: {
+            dependentOn: {
+              name: "[contact-method]",
+              value: "email"
+            },
+            message: "Enter your email address"
+          }
+        }
+      })
+    }
+  }, {
+    value: "password",
+    text: "Password",
+    conditional: {
+      html: govukInput({
+        classes: "govuk-!-width-one-third",
+        label: {
+          text: "Your password"
+        },
+        type: "tel",
+        decorate: "phone-number",
+        validate: {
+          conditional: {
+            dependentOn: {
+              name: "[contact-method]",
+              value: "phone"
+            },
+            message: "Enter your phone number"
+          }
+        }
+      })
+    }
+  }],
+  decorate: "contact-method",
+  validate: {
+    presence: {
+      message: "Select a contact method"
+    }
+  }
+}) }}
