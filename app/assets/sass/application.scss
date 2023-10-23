@@ -4,9 +4,19 @@
 // Override styles for AYR, use gov BEM classes and adapt them with elements and/or modifiers.
 
 .govuk-header {
+    &__container {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    & a {
+        font-weight: bold !important;
+    }
+
     &__logo {
         &--tna {
-            width: 100%;
+            flex: 0 0 60%;
+            padding-right: 0 !important;
         }
     }
     &__logotype-text {
@@ -14,10 +24,10 @@
             font-size: 1rem;
             text-align: right;
         }
-        & a {
-            font-weight: bold;
-            float: right;
-            margin-top: 0.5rem;
-        }
+    }
+
+    &__content {
+        padding-bottom: 10px;
+        text-align: right;
     }
 }
