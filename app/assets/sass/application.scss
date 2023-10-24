@@ -14,9 +14,7 @@
     &__content {
         text-align: right;
         padding-bottom: 0.5rem;
-      }
-
-
+    }
 
     & a {
         font-weight: bold !important;
@@ -28,6 +26,7 @@
             padding-right: 0 !important;
         }
     }
+
     &__logotype-text {
         &--tna {
             font-size: 1rem;
@@ -42,13 +41,35 @@
         align-items: center;
         text-align: center;
         padding-bottom: 1rem;
-      }
+    }
 
-      .govuk-header__content {
+    .govuk-header__content {
         text-align: center;
-      }
-  }
-
-
+    }
+}
 
 // END – AYR header override styles
+
+
+// START – AYR footer override styles
+
+.govuk-footer--ayr {
+    display: flex;
+}
+
+.govuk-footer__inline-list-item--ayr {
+    margin: 0 2rem 1rem 0;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .govuk-footer__inline-list-item--ayr {
+        display: block;
+        text-align: center;
+        padding: 0.25rem 0rem;
+    }
+}
+
+
+// END – AYR footer override styles
