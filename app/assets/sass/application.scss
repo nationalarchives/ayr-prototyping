@@ -11,6 +11,13 @@
         align-items: flex-end;
     }
 
+    &__content {
+        text-align: right;
+        padding-bottom: 0.5rem;
+      }
+
+
+
     & a {
         font-weight: bold !important;
     }
@@ -27,17 +34,18 @@
             text-align: right;
         }
     }
-
-    &__content {
-        padding-bottom: 10px;
-        text-align: right;
-    }
 }
 
 @media only screen and (max-width: 750px) {
     .govuk-header__container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+
+      .govuk-header__content {
+        text-align: center;
       }
   }
 
