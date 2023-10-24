@@ -3,6 +3,8 @@
 //
 // Override styles for AYR, use gov BEM classes and adapt them with elements and/or modifiers.
 
+
+// START – AYR header override styles
 .govuk-header {
     &__container {
         display: flex;
@@ -31,3 +33,14 @@
         text-align: right;
     }
 }
+
+@media only screen and (max-width: 750px) {
+    .govuk-header__container {
+        flex-direction: column;
+        align-items: center;
+      }
+  }
+
+
+
+// END – AYR header override styles

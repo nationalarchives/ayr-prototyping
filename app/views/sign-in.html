@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-shared.html" %}
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -13,7 +13,7 @@
       text: "Do not share your sign in details with anyone else.",
       iconFallbackText: "Warning"
     }) }}
-    <h1 class="govuk-heading-l">Sign in to Access Your Records</h1>
+    <h1 class="govuk-heading-l">Sign in to your account</h1>
 
     {{ govukInput({
       label: {
