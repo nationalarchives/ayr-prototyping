@@ -58,16 +58,32 @@
 }
 
 .govuk-footer__inline-list-item--ayr {
-    margin: 0 2rem 1rem 0;
+    margin: 0 2rem 1rem 1rem;
+}
+
+.govuk-footer__meta-item--ayr {
+    margin: 1rem 1rem 0 2rem;
 }
 
 
 
 @media only screen and (max-width: 650px) {
+    .govuk-footer--ayr {
+        flex-direction: column-reverse;
+    }
     .govuk-footer__inline-list-item--ayr {
         display: block;
         text-align: center;
-        padding: 0.25rem 0rem;
+        padding: 0.25rem 0;
+        margin-bottom: 1rem;
+    }
+    .govuk-footer--ayr img {
+        margin: 3rem auto;
+    }
+
+    .govuk-footer__meta--ayr {
+        text-align: center;
+        line-height: 1.25rem;
     }
 }
 
