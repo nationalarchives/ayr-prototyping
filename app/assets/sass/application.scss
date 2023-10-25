@@ -16,6 +16,12 @@
         padding-bottom: 0.5rem;
     }
 
+    &__content--shared {
+        text-align: right;
+        padding-bottom: 0.5rem;
+        padding-top: 0.75rem;
+    }
+
     & a {
         font-weight: bold !important;
     }
@@ -35,6 +41,17 @@
     }
 }
 
+
+.govuk-header__container--shared {
+    display: block;
+    position: relative;
+    margin-bottom: -10px;
+    padding-top: 10px;
+    border-bottom: 10px solid #1d70b8;
+}
+
+
+
 @media only screen and (max-width: 750px) {
     .govuk-header__container {
         flex-direction: column;
@@ -46,6 +63,12 @@
     .govuk-header__content {
         text-align: center;
     }
+
+    .govuk-header__content--shared {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
 }
 
 // END – AYR header override styles
@@ -58,16 +81,47 @@
 }
 
 .govuk-footer__inline-list-item--ayr {
-    margin: 0 2rem 1rem 0;
+    margin: 0 2rem 1rem 1rem;
+}
+
+.govuk-footer__meta-item--ayr {
+    margin: 1rem 1rem 0 2rem;
 }
 
 
 
 @media only screen and (max-width: 650px) {
+    .govuk-footer--ayr {
+        flex-direction: column-reverse;
+    }
     .govuk-footer__inline-list-item--ayr {
         display: block;
         text-align: center;
-        padding: 0.25rem 0rem;
+        padding: 0.25rem 0;
+        margin: 1rem;
+
+
+
+    }
+    .govuk-footer--ayr img {
+        margin: 3rem auto;
+    }
+
+    .govuk-footer__meta--ayr {
+        text-align: center;
+        line-height: 1.25rem;
+    }
+
+    .govuk-footer__meta--ayr {
+        text-align: center;
+        line-height: 1.25rem;
+    }
+    .govuk-footer__meta-item--ayr {
+        margin: 1rem 0 0 0;
+    }
+
+    .govuk-footer__licence-logo {
+        margin-right: 0px;
     }
 }
 
