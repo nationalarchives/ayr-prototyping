@@ -17,27 +17,28 @@
         </label>
       </h1>
       <div id="account-number-hint" class="govuk-hint">
-        A six digit number without spaces
+        For example, '123456' without any spaces.
       </div>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Where do I find the one-time passcode?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Your one-time passcode can be found in your chosen authenticator app that was used to set up your account.
+        </div>
+      </details>
+
       <input class="govuk-input govuk-input--width-5" id="passcode-number" name="passcodeNumber" type="text" spellcheck="false" aria-describedby="passcode-number-hint" inputmode="numeric">
     </div>
 
 
     {{ govukButton({
       text: "Continue",
-      href: "#"
+      href: "https://mzusdk.axshare.com/?id=ltuzyk&p=browse__2-all-access-users-1_5&c=1"
     }) }}
 
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Where do I find the one-time passcode?
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        Your one-time passcode can be found in your chosen authenticator app that was used to set up your account.
-      </div>
-    </details>
   </div>
 
 
