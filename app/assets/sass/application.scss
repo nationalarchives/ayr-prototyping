@@ -94,11 +94,13 @@
     .govuk-footer--ayr {
         flex-direction: column-reverse;
     }
+
     .govuk-footer__inline-list-item--ayr {
         display: block;
         text-align: center;
         padding: 0.25rem 0;
     }
+
     .govuk-footer--ayr img {
         margin: 3rem auto;
     }
@@ -112,6 +114,7 @@
         text-align: center;
         line-height: 1.25rem;
     }
+
     .govuk-footer__meta-item--ayr {
         margin: 1rem 0 0 0;
     }
@@ -130,12 +133,49 @@
     margin: 0 0 1rem 0;
     padding: 1rem 0.5rem;
     overflow: auto;
-    position: sticky;
     background-color: #F2F2F2;
 }
 
-li.govuk-list__ayr  {
+li.govuk-list__ayr {
     margin-bottom: 1rem;
 }
+
+
+.govuk-grid-column-one-third-ayr-aside {
+    max-width: 100%;
+    float: left;
+    position: fixed;
+}
+
+.govuk-grid-column-two-thirds-ayr-mainside {
+    width: 66.6666666667%;
+    float: right;
+}
+
+.govuk-grid-row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .govuk-grid-column-one-third-ayr-aside {
+        width: 100%;
+        position: relative;
+    }
+
+    .govuk-grid-column-two-thirds-ayr-mainside {
+        width: 100%;
+        float: left;
+    }
+
+    .govuk-grid-row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
+
 
 // START – AYR anchor
