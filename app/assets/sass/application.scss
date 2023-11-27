@@ -124,15 +124,18 @@
 // END – AYR footer override styles
 
 
-// START – AYR divider
+// START – AYR anchor
 
 .anchor-link-list-ayr {
-
-margin: 2rem 0;
-padding: 1rem 0 0.5rem;
-border-top: 2px solid #1d70b8;
-border-bottom: 2px solid #1d70b8;
-
+    margin: 0;
+    padding: 1rem 0.5rem;
+    overflow: auto;
+    position: sticky;
+    background-color: #F2F2F2;
 }
 
-// START – AYR divider
+li.link-list-ayr  {
+    margin-bottom: 1rem;
+}
+
+// START – AYR anchor
