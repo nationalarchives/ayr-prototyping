@@ -130,7 +130,7 @@
 // START – AYR anchor
 
 .anchor-link-list-ayr {
-    margin: 0 0 1rem 0;
+    margin: 0 0 3rem 0;
     padding: 1rem 0.5rem;
     overflow: auto;
     background-color: #F2F2F2;
@@ -141,38 +141,37 @@ li.govuk-list__ayr {
 }
 
 
-.govuk-grid-column-one-third-ayr-aside {
-    max-width: 100%;
-    float: left;
-    position: fixed;
+.govuk-grid-column-one-third--ayr-aside {
+    position: sticky;
+    top: 1rem;
 }
 
-.govuk-grid-column-two-thirds-ayr-mainside {
+.govuk-grid-column-two-thirds--ayr-mainside {
     width: 66.6666666667%;
-    float: right;
+
 }
 
-.govuk-grid-row {
-    margin-right: 0;
-    margin-left: 0;
-}
 
 
 
 @media only screen and (max-width: 750px) {
-    .govuk-grid-column-one-third-ayr-aside {
+    .govuk-grid-column-one-third--ayr-aside {
         width: 100%;
         position: relative;
     }
 
-    .govuk-grid-column-two-thirds-ayr-mainside {
+    .govuk-grid-column-two-thirds--ayr-mainside {
         width: 100%;
-        float: left;
     }
 
     .govuk-grid-row {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .govuk-grid-column-one-third--ayr-aside {
+        position: sticky;
+        top: 1rem;
     }
 
 }
