@@ -122,6 +122,11 @@
     .govuk-footer__licence-logo {
         margin-right: 0px;
     }
+
+    .govuk-footer__meta {
+        margin-left: 0px;
+      }
+
 }
 
 // END – AYR footer override styles
@@ -138,6 +143,7 @@
 
 li.govuk-list__ayr {
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .govuk-grid-column-one-third--ayr-aside {
@@ -172,3 +178,9 @@ li.govuk-list__ayr {
 
 
 // START – AYR anchor
+
+
+.placeholder  {
+    color: #cc0000!important;
+
+}
