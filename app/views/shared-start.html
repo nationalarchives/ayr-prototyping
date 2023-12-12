@@ -9,81 +9,25 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Get in touch</h1>
-    <p class="govuk-body">If you have got feedback, ideas or questions about this digital records service please do get in touch with us.</p>
+    <h1 class="govuk-heading-l">Welcome to Transfer and Access Your Records</h1>
+    <p class="govuk-body">National Archives we support dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit pellentesque. </p>
+  </div>
+</div>
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h2 class="govuk-heading-m">Select the service you need</h2>
+  <div class="govuk-grid-column-one-third govuk-grid-column-one-third__service-card">
+    <h3 class="govuk-heading-s">Transfer Digital Records</h3>
+    <p>govuk-grid-column-one-half</p>
+  </div>
 
-
-
-
-    <p class="govuk-body"><a class="govuk-link" href="mailto:tdr@nationalarchives.gov.uk" data-hsupport="email">tdr@nationalarchives.gov.uk</a></p>
+  <div class="govuk-grid-column-one-third govuk-grid-column-one-third__service-card">
+    <h3 class="govuk-heading-s">Access Your Records</h3>
+    <p>govuk-grid-column-one-half</p>
+  </div>
   </div>
 </div>
 
 
 {% endblock %}
-
-
-{{ govukInput({
-  fieldset: {
-    legend: {
-      classes: "govuk-fieldset__legend--s",
-      text: "What servies would you like to use?"
-    }
-  },
-  hint: {
-    text: "Select one option"
-  },
-  items: [{
-    value: "email",
-    text: "Email",
-    conditional: {
-      html: govukInput({
-        classes: "govuk-!-width-one-third",
-        label: {
-          text: "Email address"
-        },
-        type: "email",
-        spellcheck: "false",
-        decorate: "email-address",
-        validate: {
-          conditional: {
-            dependentOn: {
-              name: "[contact-method]",
-              value: "email"
-            },
-            message: "Enter your email address"
-          }
-        }
-      })
-    }
-  }, {
-    value: "password",
-    text: "Password",
-    conditional: {
-      html: govukInput({
-        classes: "govuk-!-width-one-third",
-        label: {
-          text: "Your password"
-        },
-        type: "tel",
-        decorate: "phone-number",
-        validate: {
-          conditional: {
-            dependentOn: {
-              name: "[contact-method]",
-              value: "phone"
-            },
-            message: "Enter your phone number"
-          }
-        }
-      })
-    }
-  }],
-  decorate: "contact-method",
-  validate: {
-    presence: {
-      message: "Select a contact method"
-    }
-  }
-}) }}
