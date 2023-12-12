@@ -191,7 +191,17 @@ li.govuk-list__ayr {
 
 
 &__service-card {
-background-color: #cc0000;
+border: #1d70b8 solid 4px;
 max-width: 90%;
+margin-right: 1rem;
+}
+
+
+}
+
+.govuk-heading-s {
+&__ayr {
+text-align: center;
+padding-top: 1rem;
 }
 }
