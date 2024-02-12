@@ -1,0 +1,96 @@
+{% extends "layouts/main-keycloak.html" %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Sign back into your account</h1>
+    <p class="govuk-body-l">You've been signed out of your account, you can either:
+    </p>
+
+    <p class="govuk-body-l">
+      <a href="#" class="govuk-link">Restart the sign-in process</a>
+    </p>
+    <p class="govuk-body-l">Or</p>
+    <p class="govuk-body-l">
+      <a href="#" class="govuk-link">Continue the sign-in process</a>
+    </p>
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+{{ govukInput({
+  fieldset: {
+    legend: {
+      classes: "govuk-fieldset__legend--s",
+      text: "What servies would you like to use?"
+    }
+  },
+  hint: {
+    text: "Select one option"
+  },
+  items: [{
+    value: "email",
+    text: "Email",
+    conditional: {
+      html: govukInput({
+        classes: "govuk-!-width-one-third",
+        label: {
+          text: "Email address"
+        },
+        type: "email",
+        spellcheck: "false",
+        decorate: "email-address",
+        validate: {
+          conditional: {
+            dependentOn: {
+              name: "[contact-method]",
+              value: "email"
+            },
+            message: "Enter your email address"
+          }
+        }
+      })
+    }
+  }, {
+    value: "password",
+    text: "Password",
+    conditional: {
+      html: govukInput({
+        classes: "govuk-!-width-one-third",
+        label: {
+          text: "Your password"
+        },
+        type: "tel",
+        decorate: "phone-number",
+        validate: {
+          conditional: {
+            dependentOn: {
+              name: "[contact-method]",
+              value: "phone"
+            },
+            message: "Enter your phone number"
+          }
+        }
+      })
+    }
+  }],
+  decorate: "contact-method",
+  validate: {
+    presence: {
+      message: "Select a contact method"
+    }
+  }
+}) }}
