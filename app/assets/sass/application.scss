@@ -226,5 +226,9 @@ font-variant: normal;
 
 
 
-// END – AYR Address override styles
+// START – AYR anchor links override styles
+.anchor-link-list-ayr a:visited {
+    color: #1d70b8;
+}
 
+// END – AYR anchor links styles
