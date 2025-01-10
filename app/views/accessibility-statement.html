@@ -1,0 +1,152 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+  <div class="govuk-grid-column-one-third  govuk-grid-column-one-third--ayr-aside">
+    <div class="anchor-link-list-ayr">
+
+      <nav aria-label="Contents" class="gem-c-contents-list" role="navigation">
+
+
+        <span class="govuk-heading-s">Contents</span>
+        <ol class="govuk-list">
+          <li class="govuk-list__ayr">
+            <a class="govuk-link" href="#top">Accessibility statement for Access Your Records</a>
+          </li>
+            <li class="govuk-list__ayr">
+              <a class="govuk-link" href="#feedback">Feedback and contact information</a>
+            </li>
+          <li class="govuk-list__ayr">
+            <a class="govuk-link" href="#technical">Technical information about this website’s accessibility</a>
+          </li>
+          <li class="govuk-list__ayr">
+            <a class="govuk-link" href="#improve">What we’re doing to improve accessibility</a>
+          </li>
+          <li class="govuk-list__ayr">
+            <a class="govuk-link" href="#preparation">Preparation of this accessibility statement</a>
+          </li>
+        </ol>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds govuk-grid-column-two-thirds--ayr-mainside">
+
+    <h1 id="top" class="govuk-heading-l">Accessibility statement for Access Your Records</h1>
+    <p class="govuk-body">Last updated on <time datetime="2024-04-15">15th April 2024</time>.
+    </p>
+    <p class="govuk-body">This accessibility statement applies to
+      <a href="https://ayr.nationalarchives.gov.uk">https://ayr.nationalarchives.gov.uk</a>
+    </p>
+    <p class="govuk-body">This website is run by The National Archives. We want as many people as possible to be able to use this website. For example, that means you should be able to:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>change colours, contrast levels and fonts using browser or device settings</li>
+      <li>zoom in up to 400% without the text spilling off the screen</li>
+      <li>navigate most of the website using a keyboard or speech recognition software</li>
+      <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and
+        VoiceOver)</li>
+    </ul>
+
+    <p class="govuk-body">We’ve also made the website text as simple as possible to understand.</p>
+    <p class="govuk-body"><a rel="external" href="https://mcmw.abilitynet.org.uk/" class="govuk-link">AbilityNet</a> has
+      advice on making your device easier to use if you have a disability.
+    </p>
+
+
+
+    <h2 id="feedback" class="govuk-heading-m">Feedback and contact information</h2>
+    <p class="govuk-body">Contact us if you find any problems not listed on this page or think we’re not meeting accessibility requirements. We’ll consider your request and get back to you. 
+      
+      <p class="govuk-body">Our contact information is as follows:</p>
+   
+      <p class="govuk-body">By email:</p> 
+      <p><a href="mailto:tdr@nationalarchives.gov.uk">tdr@nationalarchives.gov.uk</a>.</p>
+
+      <p class="govuk-body">By post:</p> 
+
+    <p class="govuk-body">If you need to contact us via post, write to: 
+    <address>
+      Digital Access Team c/o<br>
+Digital Archiving Department<br>
+The National Archives,<br>
+Kew, Richmond,<br>
+Surrey<br>
+TW9 4DU
+    </address></p>
+
+
+
+    <h3 id="enforcement" class="govuk-heading-s">Enforcement procedure</h3>
+      <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public
+        Sector Bodies
+        (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).
+        If you’re not happy with how we respond to your complaint, <a rel="external"
+          href="https://www.equalityadvisoryservice.com/" class="govuk-link">contact the Equality Advisory and Support
+          Service (EASS)</a>.</p>
+
+      <h2 id="technical" class="govuk-heading-m">Technical information about this website’s accessibility</h2>
+      <p class="govuk-body">The National Archives is committed to making its website accessible, in accordance with the
+        Public Sector Bodies
+        (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
+
+      <h3 id="compliance" class="govuk-heading-s">Compliance status</h3>
+      <p class="govuk-body">This website is partially compliant with the <a rel="external"
+          href="https://www.w3.org/TR/WCAG22/" class="govuk-link">Web Content Accessibility Guidelines version 2.2</a>
+        AA standard,
+        due to the non-compliances and exemptions listed below.</p>
+
+
+
+      <h3 id="non-accessible" class="govuk-heading-s">Non-accessible content</h3>
+      <p class="govuk-body">The content listed below is non-accessible for the following reasons:</p>
+
+
+      <h4 class="govuk-heading-s">Non-compliance with the accessibility regulations</h4>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Breadcrumb navigation links have been placed inside of the main content region of the page. This issue may affect keyboard only and screen reader users who use the ‘Skip to main content’ link and would expect to bypass repeated blocks of content including the header and any navigational regions.</li>
+        <li>Some HTML heading markup has been used in a way that does not accurately represent relationships in the content, particularly on the static page content.</li>
+      </ul>
+  
+
+      <h4 class="govuk-heading-s">Disproportionate burden</h4>
+
+    
+
+      <p class="govuk-body">It would be a disproportionate burden to fix records held on the Access Your Records platform as we are required to keep all records exactly as they have been delivered. This is to ensure that each record is completely authentic and faithfully matches what has been published by the original source.</p>
+
+
+    
+
+  
+
+
+
+
+      <h2 id="improve" class="govuk-heading-m">What we’re doing to improve accessibility</h2>
+      <p class="govuk-body">We are working to resolve accessibility issues as soon as possible. These issues include:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>moving the breadcrumb navigation links so they are outside the main content region to enable keyboard and screen reader users to skip to the main content</li>
+        <li>fixing the HTML heading markup issues found on some static content pages</li>
+      </ul>
+  
+
+      <h2 id="preparation" class="govuk-heading-m">Preparation of this accessibility statement</h2>
+      <p class="govuk-body">This website was last tested on <time datetime="2024-03-15">15th March 2024</time>.</p>
+      <p class="govuk-body">The test was carried out by the Digital Accessibility Centre. The most viewed pages were tested using automated testing tools by our website team. A further audit of the website was carried out to the WCAG 2.2 AA standard.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-9">You can read the full accessibility test report <a rel="external"
+        href="#" class="govuk-link">DAC accessibility report for Access Your Records</a>.</p>
+
+      <p class="govuk-body">
+        <a href="#top" class="govuk-link">Back to top</a>
+      </p>
+  </div>
+
+
+
+  {% endblock %}

@@ -3,10 +3,23 @@
 //
 // Override styles for AYR, use gov BEM classes and adapt them with elements and/or modifiers.
 
+
+// START – AYR header override styles
 .govuk-header {
     &__container {
         display: flex;
         align-items: flex-end;
+    }
+
+    &__content {
+        text-align: right;
+        padding-bottom: 0.5rem;
+    }
+
+    &__content--shared {
+        text-align: right;
+        padding-bottom: 0.5rem;
+        padding-top: 0.75rem;
     }
 
     & a {
@@ -19,15 +32,203 @@
             padding-right: 0 !important;
         }
     }
+
     &__logotype-text {
         &--tna {
             font-size: 1rem;
             text-align: right;
         }
     }
+}
 
-    &__content {
-        padding-bottom: 10px;
-        text-align: right;
+
+.govuk-header__container--shared {
+    display: block;
+    position: relative;
+    margin-bottom: -10px;
+    padding-top: 10px;
+    border-bottom: 10px solid #1d70b8;
+}
+
+
+
+@media only screen and (max-width: 750px) {
+    .govuk-header__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .govuk-header__content {
+        text-align: center;
+    }
+
+    .govuk-header__content--shared {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+}
+
+// END – AYR header override styles
+
+
+// START – AYR footer override styles
+
+.govuk-footer--ayr {
+    display: flex;
+}
+
+.govuk-footer__inline-list-item--ayr {
+    margin: 0 2rem 1rem 1rem;
+}
+
+.govuk-footer__meta-item--ayr {
+    margin: 1rem 1rem 0 2rem;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .govuk-footer--ayr {
+        flex-direction: column-reverse;
+    }
+
+    .govuk-footer__inline-list-item--ayr {
+        display: block;
+        text-align: center;
+        padding: 0.25rem 0;
+    }
+
+    .govuk-footer--ayr img {
+        margin: 3rem auto;
+    }
+
+    .govuk-footer__meta--ayr {
+        text-align: center;
+        line-height: 1.25rem;
+    }
+
+    .govuk-footer__meta--ayr {
+        text-align: center;
+        line-height: 1.25rem;
+    }
+
+    .govuk-footer__meta-item--ayr {
+        margin: 1rem 0 0 0;
+    }
+
+    .govuk-footer__licence-logo {
+        margin-right: 0px;
+    }
+
+    .govuk-footer__meta {
+        margin-left: 0px;
+      }
+
+}
+
+// END – AYR footer override styles
+
+
+// START – AYR anchor
+
+.anchor-link-list-ayr {
+    margin: 0 0 3rem 0;
+    padding: 1rem;
+    overflow: auto;
+    background-color: #F2F2F2;
+}
+
+li.govuk-list__ayr {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.govuk-grid-column-one-third--ayr-aside {
+    position: sticky;
+    top: 1rem;
+}
+
+.govuk-grid-column-two-thirds--ayr-mainside {
+    width: 66.6666666667%;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .govuk-grid-column-one-third--ayr-aside {
+        width: 100%;
+        position: relative;
+    }
+
+    .govuk-grid-column-two-thirds--ayr-mainside {
+        width: 100%;
+    }
+
+    .govuk-grid-row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .govuk-grid-column-one-third--ayr-aside {
+        position: relative;
     }
 }
+
+
+// START – AYR anchor
+
+
+.placeholder  {
+    color: #cc0000!important;
+
+}
+
+
+
+.govuk-grid-column-one-third {
+
+
+&__service-card {
+border: #1d70b8 solid 4px;
+max-width: 90%;
+margin-right: 1rem;
+}
+
+
+}
+
+.govuk-heading-s {
+&__ayr {
+text-align: center;
+padding-top: 1rem;
+}
+}
+
+
+.ayr-search {
+    padding: govuk-spacing(6);
+    background-color: govuk-colour("blue");
+}
+
+
+
+// START – AYR Address override styles
+
+address {
+ font-size: 1.188rem;
+ line-height: 1.563;
+ font-family: Arial, Helvetica, sans-serif;
+font-variant: normal;
+}
+
+
+
+
+// START – AYR anchor links override styles
+.anchor-link-list-ayr a:visited {
+    color: #1d70b8;
+}
+
+// END – AYR anchor links styles

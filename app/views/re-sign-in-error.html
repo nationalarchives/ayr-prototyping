@@ -9,45 +9,20 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    {{ govukWarningText({
-      text: "Do not share your sign in details with anyone else.",
-      iconFallbackText: "Warning"
-    }) }}
-    <h1 class="govuk-heading-l">Sign in to your account</h1>
-
-    {{ govukInput({
-      label: {
-        text: "Email",
-        classes: "govuk-label--s",
-        isPageHeading: true
-      },
-      id: "email",
-      name: "eventName"
-    }) }}
-
-    {{ govukInput({
-      label: {
-        text: "Password",
-        classes: "govuk-label--s",
-        isPageHeading: true
-      },
-      id: "password",
-      name: "eventName",
-      type: "password"
-    }) }}
-
-
-    {{ govukButton({
-      text: "Sign in",
-      href: "passcode-authentication"
-    }) }}
+    <h1 class="govuk-heading-l">Sign back into your account</h1>
+    <p class="govuk-body">You've been signed out of your account, you can either:
+    </p>
 
     <p class="govuk-body">
-      <a href="reset-password.html" class="govuk-link">I have forgotten my password</a>
+      <a href="#" class="govuk-link">Restart the sign-in process</a>
     </p>
-    <p class="govuk-body">If you have problems signing in, contact us at
-      <a href="mailto:tdr@nartionalarchives.gov.uk" class="govuk-link">tdr@nationalarchives.gov.uk</a>
+    <p class="govuk-body">or
+      <a href="#" class="govuk-link">Continue the sign-in process</a>
     </p>
+
+
+
+
   </div>
 </div>
 

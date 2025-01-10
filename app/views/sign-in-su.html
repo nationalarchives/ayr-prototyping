@@ -1,4 +1,4 @@
-{% extends "layouts/main-keycloak.html" %}
+{% extends "layouts/main-shared.html" %}
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
@@ -39,14 +39,11 @@
 
     {{ govukButton({
       text: "Sign in",
-      href: "passcode-authentication"
+      href: "https://mzusdk.axshare.com/?id=0naobk&p=browse__1-standard-users-1_3&c=1"
     }) }}
 
     <p class="govuk-body">
       <a href="reset-password.html" class="govuk-link">I have forgotten my password</a>
-    </p>
-    <p class="govuk-body">If you have problems signing in, contact us at
-      <a href="mailto:tdr@nartionalarchives.gov.uk" class="govuk-link">tdr@nationalarchives.gov.uk</a>
     </p>
   </div>
 </div>

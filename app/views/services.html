@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-keycloak.html" %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
@@ -10,8 +10,7 @@
 
 {% block content %}
 <h1 class="govuk-heading-l">Welcome</h1>
-    <p class="govuk-body-l">This would be intro text for duo access users to both TDR and AYR.</p>
-    <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque. Mauris nunc congue nisi vitae suscipit tellus.</p>
+    <p class="govuk-body-l">As you are registered to both of our digital records services, please select the one you would like to use today.</p>
 
     <div class="govuk-!-padding-bottom-7"></div>
 
@@ -28,7 +27,7 @@
       items: [
         {
           value: "tdr",
-          text: "Transfer a digital record"
+          text: "Transfer digital records"
         },
         {
           value: "ayr",

@@ -1,0 +1,38 @@
+{% extends "layouts/main-keycloak.html" %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Welcome to Transfer and Access Your Records</h1>
+    <p class="govuk-body">At The National Archives we facilitate two services for born digital records. Transfer Digital Records (TDR) allows registered user to upload ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit pellentesque. </p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h2 class="govuk-heading-m">Select the service you need</h2>
+  <div class="govuk-grid-column-one-third govuk-grid-column-one-third__service-card">
+    <h3 class="govuk-heading-s govuk-heading-s__ayr">Transfer Digital Records</h3>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Start now
+    </button>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-grid-column-one-third__service-card">
+    <h3 class="govuk-heading-s govuk-heading-s__ayr">Access Your Records</h3>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Start now
+    </button>
+  </div>
+  </div>
+</div>
+
+
+{% endblock %}
